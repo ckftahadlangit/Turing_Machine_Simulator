@@ -1,0 +1,116 @@
+body {
+	background-color: #d5f4e6;
+}
+
+h1 {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+textarea:focus, textarea:active {
+	background-color: red;
+}
+
+textarea {
+	resize: none;
+	width: 4vw;
+	height: 6vh;
+	overflow: hidden;
+	border: solid thin;
+	font-size: 2.4em;
+	font-weight: 500;
+	text-align: center;
+	/*margin-left: -1vw;*/
+}
+
+.inputTape {
+	/*background-color: green;*/
+	text-align: center;
+	overflow-y: hidden;
+	overflow-x: auto;
+	white-space: nowrap;
+	height: 18vh;
+	width: 90vw;
+	margin: auto;
+}
+
+.inputNum>input {
+	/*height: 4vh;*/
+	margin-top: 3vh;
+	margin-left: 0vw;
+	width: 6vw;
+}
+
+.jumbotron {
+	background-color: #deeaee;
+	min-width: 60vw;
+	max-width: 60vw;
+	min-height: 60vh;
+	max-height: 60vh;
+	margin: auto;
+	margin-top: 5vh !important;
+	border: solid thin gray;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 2vh;
+}
+
+.jheader {
+	/*background-color: yellow;*/
+	min-height: 13vh;
+	max-height: 13vh;
+	/*border-bottom: solid thin;*/
+}
+
+.headerActions, .headerCount, .headerState {
+	/*background-color: pink;*/
+	text-align: center;
+	float: left;
+	height: 13vh;
+	/*width: 15vw;*/
+	width: 25%;
+	border-right: solid thin;
+}
+
+h3 {
+	margin: 0;
+}
+
+.headerActions>form {
+	margin-top: 1vh;
+}
+
+.headerActions>button {
+	margin-top: 1vh;
+	margin-left: 0.5vw;
+}
+
+/*.headerCount {
+	float: left;
+	text-align: center;
+	height: 13vh;
+	width: 10vw;
+	border-right: solid thin;
+}*/
+
+.headerCalculation {
+	text-align: center;
+}
+
+p {
+	font-size: 2em;
+	margin-top: 2vh;
+}
+
+hr {
+	margin: 0;
+}
+
+.stateDiagram {
+	margin-top: 1vh;
+	height: 44vh;
+}

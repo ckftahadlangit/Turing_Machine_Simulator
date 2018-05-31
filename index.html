@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Turing Maching</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Turing Machine Simulator</h1>
+	<div>
+		<div class="inputTape">
+			<ul>
+				<li>
+					<textarea readonly>D</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>#</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>@</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly>1</textarea>
+				</li>
+				<li>
+					<textarea readonly></textarea>
+				</li>
+				<li>
+					<textarea readonly id="focusThis"></textarea>
+				</li>
+			</ul>
+		</div>
+		<div class="jumbotron">
+			<div class="jheader">
+				<div class="headerActions">
+					<h3>Actions</h2>
+					<form>
+						<input type="radio" name="tmType" value="power"> Power
+						<input type="radio" name="tmType" value="comparison"> Comparison
+					</form>
+					<button type="submit">Start</button>
+					<button type="submit">Step</button>
+					<button type="submit">Reset</button>
+				</div>
+				<div class="headerCount">
+					<h3>Count</h3>
+					<p>0</p>
+				</div>
+				<div class="headerState">
+					<h3>State</h3>
+					<p>q0</p>
+				</div>
+				<div class="headerCalculation">
+					<h3>Calculation</h3>
+					<form class="inputNum">
+						<input type="number" placeholder="input x" min="1">
+						<input type="number" placeholder="input y" min="1">
+					</form>
+				</div>
+			</div>
+			<hr>
+			<div class="stateDiagram"></div>
+		</div>
+	</div>
+
+	<script>
+		function getFocus() {
+			document.getElementById('focusThis').focus();
+		}
+		getFocus();
+	</script>
+</body>
+</html>
