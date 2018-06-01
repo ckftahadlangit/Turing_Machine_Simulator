@@ -217,7 +217,7 @@ function initialize(x, y) {
 
 	insertion[0].innerHTML = "<div>\n<ul>";
 	
-	for(var i = 0; i < 1000; i++) {
+	for(var i = 0; i < 200; i++) {
 		insertion[0].innerHTML += "<li>\n<textarea id=\"" + i + "\" readonly>" + inputTape[i] + "</textarea>\n</li>";	
 	}
 
