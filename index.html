@@ -1,93 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Turing Maching</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Turing Machine</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	
+	<script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<h1>Turing Machine Simulator</h1>
 	<div>
-		<div class="inputTape">
-			<ul>
-				<li>
-					<textarea readonly>D</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>#</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>@</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly>1</textarea>
-				</li>
-				<li>
-					<textarea readonly></textarea>
-				</li>
-				<li>
-					<textarea readonly id="focusThis"></textarea>
-				</li>
-			</ul>
+		<div class="inputTape">			
 		</div>
 		<div class="jumbotron">
 			<div class="jheader">
 				<div class="headerActions">
-					<h3>Actions</h2>
+					<h3>Actions</h3>
 					<form>
-						<input type="radio" name="tmType" value="power"> Power
-						<input type="radio" name="tmType" value="comparison"> Comparison
+						<input id="power" type="radio" name="tmType" value="power"> Power
+						<input id="comparison" type="radio" name="tmType" value="comparison"> Comparison
 					</form>
-					<button type="submit">Start</button>
-					<button type="submit">Step</button>
-					<button type="submit">Reset</button>
+					<button id="start" type="submit">Start</button>
+					<button id="step" type="submit">Step</button>
+					<button id="reset" type="submit">Reset</button>
+					<button id="initialize" type="submit">Initialize</button>
+					<button id="pause" type="submit">Pause</button>
 				</div>
 				<div class="headerCount">
-					<h3>Count</h3>
-					<p>0</p>
+					<h3>Iteration Count</h3>
+					<p id="count">0</p>
 				</div>
 				<div class="headerState">
 					<h3>State</h3>
-					<p>q0</p>
+					<p id="currentState">q0</p>
 				</div>
 				<div class="headerCalculation">
 					<h3>Calculation</h3>
 					<form class="inputNum">
-						<input type="number" placeholder="input x" min="1">
-						<input type="number" placeholder="input y" min="1">
+						<input id="x-value" type="number" placeholder="input x" min="1">
+						<input id="y-value" type="number" placeholder="input y" min="1">
+						<input id="speed" type="number" placeholder="speed" min="100">
 					</form>
 				</div>
 			</div>
-			<hr>
-			<div class="stateDiagram"></div>
+			<br /><br />
+			<hr />
+			<div class="stateDiagram">
+				<h2>Instructions:</h2>						
+					<h5>Select either "Power" or "Comparison" as the operation in the Actions Tab to be performed on the first and second values</h5>
+					<h5>Fill in correctly the necessary values in the Calculation Tab. X and Y values can only be positive integers and the running tape speed is always at least 100 ms fast for each interval between configurations.</h5>
+					<h5>Select "Initialize" under the Actions Tab.</h5>
+					<h5>You may now run the tape	until a configuration reaches the halting state using the "Start" button, or do the same thing configuration by configuration using the "Step" button.</h5>
+					<h5>You may pause the running tape using "Pause" or reset the Turing machine completely using "Reset".</h5>
+			</div>
 		</div>
 	</div>
 
-	<script>
+	<!-- <script>
 		function getFocus() {
 			document.getElementById('focusThis').focus();
 		}
 		getFocus();
-	</script>
+	</script> -->
+	<script src="./run.js"></script>
 </body>
 </html>
