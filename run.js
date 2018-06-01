@@ -117,10 +117,7 @@ $(document).ready(function() {
 			tapeRunningSpeed = speed;
 			resetMachine();
 			initialize(xVal, yVal);
-
-			document.getElementById("x-value").value = "";
-			document.getElementById("y-value").value = "";						
-			document.getElementById("speed").value = "";
+			
 			startButton.disabled = false;
 			stepButton.disabled = false;
 			pauseButton.disabled = false;
